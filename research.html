@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<title>Research & Publications · DeBoris Leonard</title>
+<meta name="description" content="DeBoris Leonard, PhD researcher in responsible AI and human-centered language technology at Morgan State University.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Marcellus&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+</head>
+<body>
+<header class="site-header">
+  <div class="bar">
+    <div class="affil">PhD Researcher<br>Morgan State University</div>
+    <a class="name" href="./">DeBoris Leonard</a>
+    <div class="cta-wrap"><button class="theme-btn" type="button" id="theme-btn" aria-label="Switch to dark mode"><svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg><svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg></button><a class="btn" href="contact.html">Get in touch</a></div>
+    <button class="menu-btn" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+  <nav class="nav" id="site-nav" aria-label="Primary">
+    <ul><li><a href="about.html">About Me</a></li><li><a href="cv.html">CV</a></li><li><a href="research.html" aria-current="page">Research &amp; Publications</a></li><li><a href="contact.html">Contact</a></li></ul>
+    <div class="mobile-extra"><a href="contact.html#email">Email</a><a href="https://orcid.org/0009-0004-9629-7896">ORCID</a><a href="https://scholar.google.com/citations?user=uia6FFUAAAAJ">Google Scholar</a><a href="https://www.linkedin.com/in/deboris-leonard-57173354">LinkedIn</a><a href="https://x.com/Phrozen_Ten">X</a></div>
+  </nav>
+</header>
+<section class="hero-band"><div class="hero-inner wide">
+<div class="centered">
+  <h1>Research &amp; Publications</h1>
+  <p class="lede">My research looks at how AI systems understand, evaluate, and adapt to the complexity of real-world language: where current language technologies fall short, and how to evaluate, interact with, and adapt them more equitably.</p>
+</div>
+</div></section>
+<main class="wide">
+<div class="cards">
+  <article class="card">
+    <span class="label">Published · L@S 2026</span>
+    <h3>Prescriptive Persistence</h3>
+    <p>Quantifying the breakdown in human-AI pedagogical co-regulation in feedback on English language learners’ writing. Introduces ΔP, a measure of how persistently AI feedback pushes learners toward prescriptive norms.</p>
+    <p class="meta">DeBoris Leonard, Ricky Gole, and Jamell Dacon. Proceedings of the 13th ACM Conference on Learning @ Scale, pp. 202–208.</p>
+    <div class="foot"><a class="btn" href="https://dl.acm.org/doi/10.1145/3774398.3811611">Read paper ↗</a></div>
+  </article>
+  <article class="card">
+    <span class="label">Speech</span>
+    <h3>Dialect-Aware Speech Recognition</h3>
+    <p>Post-ASR divergence evaluation and model-agnostic adaptation for dialectal, multilingual, accented, code-switched, and disfluent speech.</p>
+    <div class="foot"><span class="status">In progress</span></div>
+  </article>
+  <article class="card">
+    <span class="label">Multilingual</span>
+    <h3>Code-Switching &amp; Multilingual ASR</h3>
+    <p>How code-switching and multilingual language use affect automatic speech recognition performance and how that performance gets evaluated.</p>
+    <div class="foot"><span class="status">In progress</span></div>
+  </article>
+</div>
+
+<section class="example" aria-labelledby="ex-h">
+  <div class="centered">
+    <h2 id="ex-h">Why evaluation matters</h2>
+    <p>Standard accuracy scores count mismatched words. They can’t tell a system error from a dialect the system was never built to understand.</p>
+  </div>
+  <figure class="align" aria-labelledby="align-cap">
+    <div class="align-head">
+      <span class="label">One spoken sentence</span>
+      <span class="label" style="color:var(--loss)">Scored as 2 errors in 4 words</span>
+    </div>
+    <div class="rows">
+      <table>
+        <tbody>
+          <tr><th scope="row" class="plain">What was said<span class="tech">reference</span></th><td>he</td><td class="hit">be</td><td>working</td><td>late</td></tr>
+          <tr><th scope="row" class="plain">What the system wrote<span class="tech">hypothesis</span></th><td class="s">he's</td><td class="d">—</td><td>working</td><td>late</td></tr>
+          <tr class="ops"><th scope="row" class="plain">Scored as<span class="tech">WER operation</span></th><td class="s">changed</td><td class="d">dropped</td><td>✓</td><td>✓</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p id="align-cap">In African American English, habitual <strong>be</strong> means <em>he usually works late</em>. The system wrote <em>he’s working late</em>, meaning right now. Word error rate (WER) counts two mistakes and stops there. It has no way to register that the meaning changed. My research builds evaluation that can.</p>
+  </figure>
+</section>
+</main>
+<footer class="site-footer">
+  <div class="inner">
+    <span>© 2026 DeBoris Leonard · <a href="https://www.morgan.edu/scmns/computerscience">Department of Computer Science, Morgan State University</a></span>
+    <span class="links"><a href="contact.html#email">Email</a><a href="https://orcid.org/0009-0004-9629-7896">ORCID</a><a href="https://scholar.google.com/citations?user=uia6FFUAAAAJ">Google Scholar</a><a href="https://www.linkedin.com/in/deboris-leonard-57173354">LinkedIn</a><a href="https://x.com/Phrozen_Ten">X</a><button type="button" class="linklike" id="theme-reset" hidden>Use device setting</button></span>
+  </div>
+</footer>
+<script src="nav.js"></script>
+</body>
+</html>
